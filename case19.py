@@ -8,6 +8,14 @@ Output: [4, 5, 1, 2, 3]
 списка или список задан изначально.
 '''
 
+# вариант 1
 a = [1, 2, 3, 4, 5]
 k = 3
-print(b = a[k:len(a)] + a[0:k])
+print(a[k:] + a[:k])
+
+# вариант 2
+a = [1, 2, 3, 4, 5]
+for i in range(k - 1):
+    last = a.pop()
+    a.insert(0, last)
+print(a)
